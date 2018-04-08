@@ -114,9 +114,15 @@ public class Main extends JavaPlugin implements Listener {
 				if (player.hasPermission("specialpicks.admin")) {
 					String pickName;
 					if (args.length == 0) {
-						pickName = spick;
+						player.sendMessage(String.format("Please use /spick [%s | %s | %s]", spick, xpick, bpick));
+						return true;
 					} else {
 						pickName = args[0];
+					}
+					if (Arrays.asList(xpick, spick, bpick).indexOf(pickName) == -1) {
+						player.sendMessage(
+								String.format("Invalid pickaxe type. Please use %s, %s, or %s", spick, xpick, bpick));
+						return true;
 					}
 					ItemStack pickaxe = new ItemStack(Material.DIAMOND_PICKAXE, 1);
 					pickaxe.addEnchantment(Enchantment.DURABILITY, 1);
@@ -129,6 +135,7 @@ public class Main extends JavaPlugin implements Listener {
 			}
 		}
 		return true;
+
 	}
 
 	@Override
