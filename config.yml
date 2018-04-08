@@ -1,0 +1,18 @@
+#Input a format string according to String#format.
+#For example, <Look at %s!> would result in <Look at spick!>.
+#See https://dzone.com/articles/java-string-format-examples for more info.
+
+#For some reason, quotes are broken. z
+name-format: Your pickaxe is named %s  
+
+#Names for the pickaxes
+spick: spick
+
+xpick: xpick
+explosion-radius: 5
+
+bpick: bpick
+#It'll try to find diamonds, then gold, then iron. If it finds none,
+#then it'll drop the original block
+block-values: DIAMOND GOLD_INGOT IRON_INGOT
+block-search-radius: 1

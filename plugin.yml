@@ -1,0 +1,11 @@
+main: pickaxes.Main
+name: Special_Pickaxes
+version: 1.0
+author: Robert Chen
+description: Create 3 special pickaxes
+commands:
+  spick:
+    description: Creates a special pickaxe. 
+    usage: /spick [bpick | xpick | spick]
+    permission: specialpicks.admin
+    permission-message: You don't have the specialpicks.admin permission. :(. 
