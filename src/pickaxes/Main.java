@@ -13,6 +13,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.ExperienceOrb;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -61,7 +62,9 @@ public class Main extends JavaPlugin implements Listener {
 							item = frec.getResult();
 							item.setAmount(amount);
 
-							event.getPlayer().setExp(event.getPlayer().getExp() + frec.getExperience());
+							event.getBlock().getWorld().spawn(event.getBlock().getLocation(), ExperienceOrb.class)
+									.setExperience(2);
+							;
 							break done;
 						}
 					}
