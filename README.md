@@ -5,5 +5,7 @@ This is a plugin that adds 3 new pickaxes, that are Smelter's Pickaxe, Explosive
 Use /spick [bpick | xpick | spick] to give yourself a pickaxe. 
 
 bpick -> Bountiful Pickaxe
+
 spick -> Smelter's Pickaxe
+
 xpick -> Explosive Pickaxe
